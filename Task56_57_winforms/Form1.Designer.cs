@@ -56,7 +56,8 @@
             // 
             // openFileDialog1
             // 
-            openFileDialog1.FileName = "openFileDialog1";
+            openFileDialog1.FileName = "Выберите аудиофайл...";
+            openFileDialog1.Filter = "WAV files (*.wav)|*.wav|All files (*.*)|*.*";
             // 
             // Choose
             // 
