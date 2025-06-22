@@ -1,6 +1,5 @@
 *.[oa]
 *.*
-*.sln
 *.vcxproj
 .vs
 *.json
@@ -18,4 +17,6 @@ build
 !*.cs
 !*.bat
 !*.exclude
+!*.sln
+!*.csproj
 f

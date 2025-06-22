@@ -1,2 +1,3 @@
-Abd, Omi, Jay, L-501, 10
+Hamidov, Omi, Jay, L-501, 10
 Dune, Far, Fox, M-300, 15
+Hamidov, Omar, Badr, S400, 14
