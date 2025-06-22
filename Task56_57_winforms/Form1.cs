@@ -22,17 +22,16 @@ namespace Task56_57_winforms
 
             //выт€гиваем из ресурсов звуковой файл  
             sp.Stream = Properties.Resources.collectathon;  //Audio file added now!
-
         }
 
         private void Start_Click(object sender, EventArgs e)
         {
-
+            sp.Play();
         }
 
         private void Stop_Click(object sender, EventArgs e)
         {
-
+            sp.Stop();
         }
     }
 }
