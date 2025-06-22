@@ -33,5 +33,17 @@ namespace Task56_57_winforms
         {
             sp.Stop();
         }
+
+        private void Choose_Click(object sender, EventArgs e)
+        {
+            //если пользователь выбрал файл  
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                //если пользователь выбрал файл типа wav  
+                if (openFileDialog1.FileName.Substring(openFileDialog1.FileName.Length - 3, 3)  == "wav")  
+                    sp.SoundLocation = openFileDialog1.FileName;
+            }
+
+        }
     }
 }
