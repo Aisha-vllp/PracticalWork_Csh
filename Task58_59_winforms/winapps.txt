@@ -1,0 +1,44 @@
+   using System;
+
+   namespace RandomObjectGenerator
+   {
+       class Program
+       {
+           static void Main(string[] args)
+           {
+               Random rnd = new Random();
+               int[] uniqueNumbers = new int[100];
+               uniqueNumbers[0] = rnd.Next(0, 101); // Генерируем первое число
+
+               for (int i = 1; i < 100;)
+               {
+                   int num = rnd.Next(0, 101); // Генерируем новое число
+                   int j;
+
+                   // Проверяем, есть ли совпадение среди уже сгенерированных чисел
+                   for (j = 0; j < i; j++)
+                   {
+                       if (num == uniqueNumbers[j])
+                           break; // Совпадение найдено
+                   }
+
+                   if (j == i)
+                   { // Совпадение не найдено
+                       uniqueNumbers[i] = num; // Сохраняем уникальное число
+                       i++; // Переходим к следующему элементу
+                   }
+               }
+
+               // Выводим сгенерированные уникальные числа
+               for (int i = 0; i < 100; i++)
+               {
+                   Console.Write("{0,4} ", uniqueNumbers[i]);
+                   if (i % 10 == 9)
+                       Console.WriteLine(); // Печатаем новую строку каждые 10 чисел
+               }
+
+               Console.ReadKey(); // Ожидаем нажатия клавиши перед выходом
+           }
+       }
+   }
+   

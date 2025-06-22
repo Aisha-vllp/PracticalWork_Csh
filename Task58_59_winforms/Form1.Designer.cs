@@ -28,12 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            PickRandomData = new Button();
+            txtResult = new TextBox();
+            label1 = new Label();
+            SuspendLayout();
+            // 
+            // PickRandomData
+            // 
+            PickRandomData.Location = new Point(172, 87);
+            PickRandomData.Name = "PickRandomData";
+            PickRandomData.Size = new Size(94, 29);
+            PickRandomData.TabIndex = 0;
+            PickRandomData.Text = "Pick";
+            PickRandomData.UseVisualStyleBackColor = true;
+            PickRandomData.Click += PickRandomData_Click;
+            // 
+            // txtResult
+            // 
+            txtResult.Location = new Point(373, 89);
+            txtResult.Name = "txtResult";
+            txtResult.Size = new Size(95, 27);
+            txtResult.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(317, 92);
+            label1.Name = "label1";
+            label1.Size = new Size(52, 20);
+            label1.TabIndex = 2;
+            label1.Text = "Result:";
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(490, 408);
+            Controls.Add(label1);
+            Controls.Add(txtResult);
+            Controls.Add(PickRandomData);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button PickRandomData;
+        private TextBox txtResult;
+        private Label label1;
     }
 }
