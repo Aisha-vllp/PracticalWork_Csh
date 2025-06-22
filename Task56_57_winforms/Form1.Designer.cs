@@ -28,35 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
+            Start = new Button();
+            Stop = new Button();
             SuspendLayout();
             // 
-            // button1
+            // Start
             // 
-            button1.Location = new Point(66, 98);
-            button1.Name = "button1";
-            button1.Size = new Size(110, 29);
-            button1.TabIndex = 0;
-            button1.Text = "Прослушать";
-            button1.UseVisualStyleBackColor = true;
+            Start.Location = new Point(66, 98);
+            Start.Name = "Start";
+            Start.Size = new Size(110, 29);
+            Start.TabIndex = 0;
+            Start.Text = "Прослушать";
+            Start.UseVisualStyleBackColor = true;
+            Start.Click += Start_Click;
             // 
-            // button2
+            // Stop
             // 
-            button2.Location = new Point(66, 188);
-            button2.Name = "button2";
-            button2.Size = new Size(110, 29);
-            button2.TabIndex = 1;
-            button2.Text = "Остановить";
-            button2.UseVisualStyleBackColor = true;
+            Stop.Location = new Point(66, 188);
+            Stop.Name = "Stop";
+            Stop.Size = new Size(110, 29);
+            Stop.TabIndex = 1;
+            Stop.Text = "Остановить";
+            Stop.UseVisualStyleBackColor = true;
+            Stop.Click += Stop_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(522, 400);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(Stop);
+            Controls.Add(Start);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -64,7 +66,7 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
+        private Button Start;
+        private Button Stop;
     }
 }
