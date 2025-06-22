@@ -19,4 +19,5 @@ build
 !*.exclude
 !*.sln
 !*.csproj
+!*.resx
 f

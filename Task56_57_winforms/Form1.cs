@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;  
 using System.Text;  
 using System.Windows.Forms;  
-using System.Media;//подключили пространство имен SoundPlayer  
+using System.Media; //подключили пространство имен SoundPlayer  
 
 
 namespace Task56_57_winforms
@@ -19,6 +19,10 @@ namespace Task56_57_winforms
             InitializeComponent();
             //создаем экземпл€р класса SoundPlayer  
             sp = new SoundPlayer();
+
+            //выт€гиваем из ресурсов звуковой файл  
+            sp.Stream = Properties.Resources.collectathon;  //Audio file added now!
+
         }
 
         private void Start_Click(object sender, EventArgs e)
