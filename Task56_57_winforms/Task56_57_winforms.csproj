@@ -9,17 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Update="Form1.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Form1.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Update="Form1.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Form1.Designer.cs</LastGenOutput>
+      <Generator></Generator>
     </EmbeddedResource>
   </ItemGroup>
 
