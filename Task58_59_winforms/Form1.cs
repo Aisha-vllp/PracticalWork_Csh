@@ -4,7 +4,7 @@ namespace Task58_59_winforms
 {
     public partial class Form1 : Form
     {
-        private string[] items = { "Apple", "Banana", "Cherry", "Date", "Elderberry" };
+        //private string[] items = { "Apple", "Banana", "Cherry", "Date", "Elderberry" };
         public Form1()
         {
             InitializeComponent();
@@ -12,9 +12,18 @@ namespace Task58_59_winforms
 
         private void PickRandomData_Click(object sender, EventArgs e)
         {
-            // Используем метод PickRandom для выбора случайного элемента
-            string randomItem = items.PickRandom();
-            txtResult.Text = randomItem; // Отображаем результат в текстовом поле
+            string inputDatas = InputDatasTxtBox.Text;
+            string[] inputItems = inputDatas.Split(new[] { ',', ' ', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+
+            if (inputItems.Length > 0)
+            {
+                // Используем метод PickRandom для выбора случайного элемента
+                string randomItem = inputItems.PickRandom();
+                txtResult.Text = randomItem; // Отображаем результат в текстовом поле
+            }else
+            {
+                txtResult.Text = "Нет данных!"; //Сообщение об ошибке
+            }
         }
     }
 

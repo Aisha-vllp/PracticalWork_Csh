@@ -31,6 +31,7 @@
             PickRandomData = new Button();
             txtResult = new TextBox();
             label1 = new Label();
+            InputDatasTxtBox = new TextBox();
             SuspendLayout();
             // 
             // PickRandomData
@@ -59,11 +60,20 @@
             label1.TabIndex = 2;
             label1.Text = "Result:";
             // 
+            // InputDatasTxtBox
+            // 
+            InputDatasTxtBox.Location = new Point(22, 87);
+            InputDatasTxtBox.Multiline = true;
+            InputDatasTxtBox.Name = "InputDatasTxtBox";
+            InputDatasTxtBox.Size = new Size(125, 190);
+            InputDatasTxtBox.TabIndex = 3;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(490, 408);
+            Controls.Add(InputDatasTxtBox);
             Controls.Add(label1);
             Controls.Add(txtResult);
             Controls.Add(PickRandomData);
@@ -78,5 +88,6 @@
         private Button PickRandomData;
         private TextBox txtResult;
         private Label label1;
+        private TextBox InputDatasTxtBox;
     }
 }
