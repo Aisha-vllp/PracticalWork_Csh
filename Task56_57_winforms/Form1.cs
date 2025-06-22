@@ -22,6 +22,8 @@ namespace Task56_57_winforms
 
             //вытягиваем из ресурсов звуковой файл  
             sp.Stream = Properties.Resources.collectathon;  //Audio file added now!
+            this.KeyPreview = true; // Позволяет форме обрабатывать нажатия клавиш
+            this.KeyDown += new KeyEventHandler(Form1_KeyDown); // добавляем обработчик события KeyDown
         }
 
         private void Start_Click(object sender, EventArgs e)
@@ -44,6 +46,18 @@ namespace Task56_57_winforms
                     sp.SoundLocation = openFileDialog1.FileName;
             }
 
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Space) // Если нажата клавиша Space
+            {
+                sp.Play(); // Начинаем воспроизведение
+            }
+            else if (e.KeyCode == Keys.S) // Если нажата клавиша S
+            {
+                sp.Stop(); // Останавливаем воспроизведение
+            }
         }
     }
 }

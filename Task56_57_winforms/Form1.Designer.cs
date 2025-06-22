@@ -80,6 +80,9 @@
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
+
+            //added manually!
+            this.KeyPreview = true; // Позволяет форме обрабатывать нажатия клавиш
         }
 
         #endregion
